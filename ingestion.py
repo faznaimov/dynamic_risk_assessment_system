@@ -1,9 +1,10 @@
 '''
-Script to ingest data, merge it and create final data.
+Script that ingests data, merges it and creates final data.
 
 Author: Faz Naimov
 Date: 1/24/2022
 '''
+
 import pandas as pd
 import os
 import json
