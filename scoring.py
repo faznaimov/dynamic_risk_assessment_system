@@ -2,7 +2,7 @@
 Script that tracks f1 score of the model
 
 Author: Faz Naimov
-Date: 1/26/2022
+Date: 1/26/2023
 '''
 
 import pandas as pd
@@ -37,6 +37,8 @@ def score_model():
 
     with open(model_path + '/latestscore.txt', 'w') as f:
         f.write(str(f1score))
+        
+    return f1score
 
 
 if __name__ == '__main__':

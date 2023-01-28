@@ -2,7 +2,7 @@
 Script that trains the model
 
 Author: Faz Naimov
-Date: 1/26/2022
+Date: 1/26/2023
 '''
 
 import pandas as pd

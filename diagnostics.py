@@ -1,6 +1,11 @@
+'''
+Module containg diagnostics functions
+
+Author: Faz Naimov
+Date: 1/26/2023
+'''
 
 import pandas as pd
-import numpy as np
 import timeit
 import os
 import json
@@ -72,11 +77,3 @@ def execution_time():
 def outdated_packages_list():
     # get a list of
     return os.system('pip list --outdated')
-
-
-if __name__ == '__main__':
-    model_predictions()
-    dataframe_summary()
-    count_na()
-    execution_time()
-    outdated_packages_list()

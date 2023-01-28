@@ -2,7 +2,7 @@
 Script that ingests data, merges it and creates final data.
 
 Author: Faz Naimov
-Date: 1/24/2022
+Date: 1/24/2023
 '''
 
 import pandas as pd

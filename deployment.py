@@ -2,7 +2,7 @@
 Script that copies model and other files to deployment.
 
 Author: Faz Naimov
-Date: 1/26/2022
+Date: 1/26/2023
 '''
 
 import os
