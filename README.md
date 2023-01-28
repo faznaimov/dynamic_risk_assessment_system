@@ -11,7 +11,8 @@
 - [Usage](#usage)
   * [Create Environment](#create-environment)
   * [Run The App on Local Machine](#run-the-app-on-local-machine)
-  * [Run Test Scripts](#run-test-scripts)
+  * [Set Up Cronjob](#set-up-cronjob)
+  * [Run New Data Check and Model Drift Manually](#run-new-data-check-and-model-drift-manually)
 - [License](#license)
 
 ## Project Description
@@ -20,8 +21,6 @@ Project to create, deploy, and monitor a risk assessment ML model that will esti
 2. Training, scoring, and deploying ML model
 3. Model diagnostics
 4. Model reporting
-
-![Full Process](/images/fullprocess.jpg)
 
 [Deployed App](https://dynamic-risk-assesment.onrender.com)
 
@@ -69,7 +68,6 @@ The directories structure are list as below:
 └── wsgi.py
 ```
 
-
 - ```training.py```: Python script meant to train an ML model
 - ```scoring.py```: Python script meant to score an ML model
 - ```deployment.py```: Python script meant to deploy a trained ML model
@@ -81,6 +79,9 @@ The directories structure are list as below:
 - ```apicalls.py```: Python script meant to call your API endpoints
 - ```fullprocess.py```: script meant to determine whether a model needs to be re-deployed, and to call all other Python scripts when needed
 - ```cronjob.txt```: crontab text runs the fullprocess.py script every 10 min
+
+fullprocess.py logic:
+![Full Process](/images/fullprocess.jpg)
 
 ## Usage
 
@@ -97,7 +98,7 @@ Make sure to have conda installed and ready.
 > python app.py
 ```
 
-### Set up cronjob
+### Set Up Cronjob
 ```
 > service cron start
 > crontab -e
@@ -105,6 +106,11 @@ Press the "i" key
 Insert a cron job from cronjob.txt
 Press the escape key
 Type ":wq"
+```
+
+### Run New Data Check and Model Drift Manually
+```
+> python fullprocess.py
 ```
 
 ## License
