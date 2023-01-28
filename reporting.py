@@ -18,7 +18,7 @@ with open('config.json', 'r') as f:
     config = json.load(f)
 
 test_data_path = os.path.join(config['test_data_path'])
-
+model_path = os.path.join(config['output_model_path'])
 
 # Function for reporting
 def conf_mat():
@@ -33,7 +33,7 @@ def conf_mat():
              {'fontsize': 10}, fontproperties='monospace')
     plt.axis('off')
     plt.tight_layout()
-    plt.savefig('images/confusionmatrix.png')
+    plt.savefig(model_path + '/confusionmatrix.png')
 
 
 if __name__ == '__main__':
