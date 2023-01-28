@@ -33,7 +33,7 @@ def predict():
 @app.route("/scoring", methods=['GET', 'OPTIONS'])
 def scoring():
     # check the score of the deployed model
-    score = score_model()
+    score = score_model(test_data_path + '/testdata.csv', overwrite=False)
     return f'F1 score: {str(score)}'
 
 # Summary Statistics Endpoint
