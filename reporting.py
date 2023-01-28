@@ -21,7 +21,7 @@ test_data_path = os.path.join(config['test_data_path'])
 
 
 # Function for reporting
-def score_model():
+def conf_mat():
     y_test_preds = model_predictions()
     test_data = pd.read_csv(test_data_path + '/testdata.csv')
     y_test = test_data['exited'].values.reshape(-1, 1).ravel()
@@ -37,4 +37,4 @@ def score_model():
 
 
 if __name__ == '__main__':
-    score_model()
+    conf_mat()
