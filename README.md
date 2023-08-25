@@ -29,7 +29,7 @@ Project to create, deploy, and monitor a risk assessment ML model that will esti
 ![App](/images/app.png)
 
 ## Files and Data description
-The directories structure are list as below:
+The directory structure:
 ```bash
 .
 ├── ingesteddata
